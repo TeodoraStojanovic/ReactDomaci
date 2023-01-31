@@ -4,7 +4,7 @@ return(
 <div  className='pocetna'>
   
 <div className="hero-text">
-    <h1  > Zabavi se!</h1>
+    <h1  className="naslov"> Dobro dosli u svet zabave!</h1>
 </div>
 
 <br /><br /><br /><br /><br />
