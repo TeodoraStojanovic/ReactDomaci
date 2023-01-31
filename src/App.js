@@ -5,7 +5,8 @@ import Pocetna from './komponente/Pocetna';
 import NavBar from './komponente/NavBar';
 import { useState } from 'react';
 import Festivali from './komponente/Festivali';
-/*import Omiljeni from './komponente/Omiljeni';*/
+import Omiljeni from './komponente/Omiljeni';
+import Footer from './komponente/Footer';
 
 function App() {
  const [omiljeniF,setOmiljeniF]=useState([]);
@@ -87,7 +88,7 @@ const [krterijumPretrage,setKriterijumPretrage]=useState("");
 function dodaj(id){
   for(var i=0;i<sviFestivali.length;i++){
     if(sviFestivali[i].id==id){
-      sviFestivali[i].omiljena=1;
+      sviFestivali[i].omiljeni=1;
     }
   }
   var niz = sviFestivali.filter((f)=>f.omiljeni==1);
@@ -110,10 +111,11 @@ function izbaci(id){
       <Routes>
         <Route path="/" element={<Pocetna></Pocetna>}></Route>
         <Route path="/festivali" element={<Festivali kriterijum={krterijumPretrage}  festivali={sviFestivali} dodaj={dodaj}></Festivali>}></Route>
+        <Route path="/omiljeni" element={<Omiljeni kriterijum={krterijumPretrage}  festivali={omiljeniF} izbaci={izbaci}></Omiljeni>}></Route>
       </Routes>
      
       </BrowserRouter>
-      
+      <Footer></Footer>
       </div>
   );
 }

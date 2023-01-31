@@ -4,9 +4,10 @@ function Kartica({f,dodaj,mod,izbaci}) {
 
     return (
     <div className="card"   >
+        <h5 className="card-title">{f.naziv}</h5>
         <img src={f.slika} className="card-img-top" alt="..."/>
         <div className="card-body">
-          <h5 className="card-title">{f.naziv}</h5>
+          
           <p className="card-text">{f.opis} <br /> Datum: {f.datum}</p>
           {mod==1 ?
             <button className="btn btn-primary" onClick={()=>dodaj(f.id)}>Dodaj u omiljene</button>

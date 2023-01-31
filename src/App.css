@@ -135,25 +135,36 @@ margin: auto;
 }
 
 .card-img-top{
-  height: 150px;
-  width: auto;
- 
+  margin-top: 15px;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 
 }
 .btn{
 font-size: large;
 background-color: rgb(60, 95, 118);
 color: white;
+margin-left: auto;
+margin-right: auto;
+display: block;
 ;
 }
 .card-title{
 font-size: 35px;
-margin-top: 5px;
+margin-top: 9px;
 margin-bottom: 5px;
+text-align: center;
 ;
 }
 .card-text{
 
   font-size: 19px;
-  
+  text-align: center;
+}
+.footer{
+text-align: center;
+background-color: #c78283;
 }
